@@ -26,4 +26,15 @@ storageUser.get("/autores/nacionalidad", (req, res) => {
     )
 })
 
+// http://127.10.10.10:5500/user/categorias
+storageUser.get("/categorias", (req, res) => {
+    con.query(
+        `SELECT id_categoria, nombre FROM categoria`,
+
+        (error, data, fill) => {
+            res.send(data)
+        }
+    )
+})
+
 export default storageUser;
