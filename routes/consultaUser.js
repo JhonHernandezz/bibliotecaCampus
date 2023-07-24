@@ -173,4 +173,16 @@ storageUser.get("/libros/paginas", (req, res) => {
     )
 })
 
+// http://127.10.10.10:5500/user/usuario/Ana
+storageUser.get("/usuario/:nombre", (req, res) => {
+    con.query(
+        `SELECT libro.id_libro, libro.titulo, usuario.id_usuario, usuario.nombre, usuario.apellido FROM libro INNER JOIN prestamo ON libro.id_libro = prestamo.id_libro INNER JOIN usuario ON prestamo.id_usuario = usuario.id_usuario WHERE usuario.nombre = ?`,
+        req.params.nombre,
+
+        (error, data, fill) => {
+            res.send(data)
+        }
+    )
+})
+
 export default storageUser;
