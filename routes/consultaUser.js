@@ -59,4 +59,15 @@ storageUser.get("/estados/descripciones", (req, res) => {
     )
 })
 
+// http://127.10.10.10:5500/user/titulo/autor/editorial
+storageUser.get("/titulo/autor/editorial", (req, res) => {
+    con.query(
+        `SELECT libro.id_libro, libro.titulo, libro.isbn, libro.num_paginas, autor.id_autor, autor.nombre, autor.apellido, autor.nacionalidad, editorial.id_editorial, editorial.nombre, editorial.direccion FROM libro INNER JOIN autor ON libro.id_autor = autor.id_autor INNER JOIN editorial ON libro.id_editorial = editorial.id_editorial`,
+
+        (error, data, fill) => {
+            res.send(data)
+        }
+    )
+})
+
 export default storageUser;
