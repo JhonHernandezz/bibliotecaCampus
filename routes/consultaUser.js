@@ -92,10 +92,21 @@ storageUser.get("/reserva/starDate/estado", (req, res) => {
     )
 })
 
-// http://127.10.10.10:5500/user/disponibles/prestamo/
+// http://127.10.10.10:5500/user/disponibles/prestamo
 storageUser.get("/disponibles/prestamo", (req, res) => {
     con.query(
         `SELECT libro.id_libro, autor.id_autor, autor.nombre, autor.apellido, estado_libro.id_estado, estado_libro.nombre FROM libro INNER JOIN autor ON libro.id_autor = autor.id_autor INNER JOIN estado_libro ON libro.id_estado = estado_libro.id_estado WHERE estado_libro.id_estado = 1`,
+
+        (error, data, fill) => {
+            res.send(data)
+        }
+    )
+})
+
+// http://127.10.10.10:5500/user/prestados/devolucion
+storageUser.get("/prestados/devolucion", (req, res) => {
+    con.query(
+        `SELECT prestamo.id_prestamo, libro.id_libro, libro.titulo, prestamo.fecha_devolucion FROM libro INNER JOIN prestamo ON libro.id_libro = prestamo.id_libro`,
 
         (error, data, fill) => {
             res.send(data)
