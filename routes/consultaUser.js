@@ -137,4 +137,16 @@ storageUser.get("/autor/:nombre", (req, res) => {
     )
 })
 
+// http://127.10.10.10:5500/user/categoria/Novela
+storageUser.get("/categoria/:nombre", (req, res) => {
+    con.query(
+        `SELECT libro.id_libro, libro.titulo, categoria.id_categoria, categoria.nombre FROM libro INNER JOIN categoria ON libro.id_categoria = categoria.id_categoria WHERE categoria.nombre = ?`,
+        req.params.nombre,
+
+        (error, data, fill) => {
+            res.send(data)
+        }
+    )
+})
+
 export default storageUser;
