@@ -70,4 +70,15 @@ storageUser.get("/titulo/autor/editorial", (req, res) => {
     )
 })
 
+// http://127.10.10.10:5500/user/prestamo/starDate/endDate
+storageUser.get("/prestamo/starDate/endDate", (req, res) => {
+    con.query(
+        `SELECT id_prestamo, id_usuario, fecha_prestamo, fecha_devolucion, estado FROM prestamo`,
+
+        (error, data, fill) => {
+            res.send(data)
+        }
+    )
+})
+
 export default storageUser;
