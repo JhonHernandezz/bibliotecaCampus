@@ -48,4 +48,15 @@ storageUser.get("/editoriales/direcciones", (req, res) => {
     )
 })
 
+// http://127.10.10.10:5500/user/estados/descripciones
+storageUser.get("/estados/descripciones", (req, res) => {
+    con.query(
+        `SELECT id_libro, titulo, isbn, num_paginas, nombre, descripcion FROM libro INNER JOIN estado_libro ON libro.id_estado = estado_libro.id_estado`,
+
+        (error, data, fill) => {
+            res.send(data)
+        }
+    )
+})
+
 export default storageUser;
