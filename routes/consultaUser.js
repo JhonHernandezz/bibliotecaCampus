@@ -219,4 +219,15 @@ storageUser.get("/editorial/:nombre", (req, res) => {
     )
 })
 
+// http://127.10.10.10:5500/user/prestamoss/usuario
+storageUser.get("/prestamoss/usuario", (req, res) => {
+    con.query(
+        `SELECT prestamo.id_prestamo, prestamo.fecha_prestamo, usuario.id_usuario, usuario.nombre, usuario.apellido FROM prestamo INNER JOIN usuario ON prestamo.id_usuario = usuario.id_usuario`,
+
+        (error, data, fill) => {
+            res.send(data)
+        }
+    )
+})
+
 export default storageUser;
