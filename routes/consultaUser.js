@@ -207,4 +207,16 @@ storageUser.get("/reservados", (req, res) => {
     )
 })
 
+// http://127.10.10.10:5500/user/editorial/Novela
+storageUser.get("/editorial/:nombre", (req, res) => {
+    con.query(
+        `SELECT libro.id_libro, libro.titulo, editorial.id_editorial, editorial.nombre FROM libro INNER JOIN editorial ON libro.id_editorial = editorial.id_editorial WHERE editorial.nombre = ?`,
+        req.params.nombre,
+
+        (error, data, fill) => {
+            res.send(data)
+        }
+    )
+})
+
 export default storageUser;
