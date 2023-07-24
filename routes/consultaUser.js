@@ -37,4 +37,15 @@ storageUser.get("/categorias", (req, res) => {
     )
 })
 
+// http://127.10.10.10:5500/user/editoriales/direcciones
+storageUser.get("/editoriales/direcciones", (req, res) => {
+    con.query(
+        `SELECT id_editorial, nombre, direccion, telefono FROM editorial`,
+
+        (error, data, fill) => {
+            res.send(data)
+        }
+    )
+})
+
 export default storageUser;
