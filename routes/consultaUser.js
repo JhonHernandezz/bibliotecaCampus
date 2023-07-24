@@ -81,4 +81,15 @@ storageUser.get("/prestamo/starDate/endDate", (req, res) => {
     )
 })
 
+// http://127.10.10.10:5500/user/reserva/starDate/estado
+storageUser.get("/reserva/starDate/estado", (req, res) => {
+    con.query(
+        `SELECT id_reserva, fecha_reserva, fecha_reserva_fin, estado, estado FROM reserva`,
+
+        (error, data, fill) => {
+            res.send(data)
+        }
+    )
+})
+
 export default storageUser;
