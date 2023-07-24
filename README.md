@@ -104,42 +104,42 @@ Puedes probar diferentes rutas accediendo a:
 
 #### RUTAS 
 
-<!-- http://127.10.10.10:5500/user/autores/nacionalidad -->
+http://127.10.10.10:5500/user/autores/nacionalidad -->
 
-<!-- http://127.10.10.10:5500/user/categorias -->
+http://127.10.10.10:5500/user/categorias -->
 
-<!-- http://127.10.10.10:5500/user/editoriales/direcciones -->
+http://127.10.10.10:5500/user/editoriales/direcciones -->
 
-<!-- http://127.10.10.10:5500/user/estados/descripciones -->
+http://127.10.10.10:5500/user/estados/descripciones -->
 
-<!-- http://127.10.10.10:5500/user/titulo/autor/editorial -->
+http://127.10.10.10:5500/user/titulo/autor/editorial -->
 
-<!-- http://127.10.10.10:5500/user/prestamo/starDate/endDate -->
+http://127.10.10.10:5500/user/prestamo/starDate/endDate -->
 
-<!-- http://127.10.10.10:5500/user/reserva/starDate/estado -->
+http://127.10.10.10:5500/user/reserva/starDate/estado -->
 
-<!-- http://127.10.10.10:5500/user/reserva/starDate/estado -->
+http://127.10.10.10:5500/user/reserva/starDate/estado -->
 
-<!-- http://127.10.10.10:5500/user/prestados/devolucion -->
+http://127.10.10.10:5500/user/prestados/devolucion -->
 
-<!-- http://127.10.10.10:5500/user/usuarios/email -->
+http://127.10.10.10:5500/user/usuarios/email -->
 
-<!-- http://127.10.10.10:5500/user/autor/Gabriel -->
+http://127.10.10.10:5500/user/autor/Gabriel -->
 
-<!-- http://127.10.10.10:5500/user/categoria/Novela -->
+http://127.10.10.10:5500/user/categoria/Novela -->
 
-<!-- http://127.10.10.10:5500/user/prestamos/Juan -->
+http://127.10.10.10:5500/user/prestamos/Juan -->
 
-<!-- http://127.10.10.10:5500/user/libros/paginas -->
+http://127.10.10.10:5500/user/libros/paginas -->
 
-<!-- http://127.10.10.10:5500/user/usuario/Ana -->
+http://127.10.10.10:5500/user/usuario/Ana -->
 
-<!-- http://127.10.10.10:5500/user/autores -->
+http://127.10.10.10:5500/user/autores -->
 
-<!-- http://127.10.10.10:5500/user/reservados -->
+http://127.10.10.10:5500/user/reservados -->
 
-<!-- http://127.10.10.10:5500/user/editorial/Novela -->
+http://127.10.10.10:5500/user/editorial/Novela -->
 
-<!-- http://127.10.10.10:5500/user/prestamoss/usuario -->
+http://127.10.10.10:5500/user/prestamoss/usuario -->
 
-<!-- http://127.10.10.10:5500/user/titulo -->
+http://127.10.10.10:5500/user/titulo
