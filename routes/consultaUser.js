@@ -162,4 +162,15 @@ storageUser.get("/prestamos/:nombre", (req, res) => {
     )
 })
 
+// http://127.10.10.10:5500/user/libros/paginas
+storageUser.get("/libros/paginas", (req, res) => {
+    con.query(
+        `SELECT id_libro, titulo, num_paginas FROM libro WHERE num_paginas > 500`,
+
+        (error, data, fill) => {
+            res.send(data)
+        }
+    )
+})
+
 export default storageUser;
