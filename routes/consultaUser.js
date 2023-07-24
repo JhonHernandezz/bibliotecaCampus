@@ -185,4 +185,15 @@ storageUser.get("/usuario/:nombre", (req, res) => {
     )
 })
 
+// http://127.10.10.10:5500/user/autores
+storageUser.get("/autores", (req, res) => {
+    con.query(
+        `SELECT id_autor, nombre, apellido, nacionalidad FROM autor WHERE nacionalidad = "Española"`,
+
+        (error, data, fill) => {
+            res.send(data)
+        }
+    )
+})
+
 export default storageUser;
