@@ -196,4 +196,15 @@ storageUser.get("/autores", (req, res) => {
     )
 })
 
+// http://127.10.10.10:5500/user/reservados
+storageUser.get("/reservados", (req, res) => {
+    con.query(
+        `SELECT libro.id_libro, libro.titulo, estado_libro.id_estado, estado_libro.nombre FROM libro INNER JOIN estado_libro ON libro.id_estado = estado_libro.id_estado WHERE estado_libro.id_estado = 4`,
+
+        (error, data, fill) => {
+            res.send(data)
+        }
+    )
+})
+
 export default storageUser;
